@@ -195,11 +195,11 @@ EuclidAudioProcessorEditor::EuclidAudioProcessorEditor(EuclidAudioProcessor& p)
     statusLabel.setColour(juce::Label::textColourId, Theme::textMuted);
     addAndMakeVisible(statusLabel);
 
-    footerLabel.setText("Euclidean rhythm gate  ·  Drag circle to set pulses", juce::dontSendNotification);
+    footerLabel.setText("Uclid  ·  github.com/yodem/uclid-plugin", juce::dontSendNotification);
     footerLabel.setFont(juce::FontOptions(12.0f));
     footerLabel.setJustificationType(juce::Justification::centred);
-    footerLabel.setColour(juce::Label::textColourId, Theme::textMuted);
-    footerLabel.setTooltip("github.com/juce-framework/JUCE");
+    footerLabel.setColour(juce::Label::textColourId, Theme::textLink);
+    footerLabel.setTooltip("https://github.com/yodem/uclid-plugin");
     addAndMakeVisible(footerLabel);
 
     bypassButton.setClickingTogglesState(true);
