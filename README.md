@@ -4,7 +4,8 @@ A small **audio plugin** that gates volume with a **[Euclidean rhythm](https://e
 
 This repo is part of my **open-source plugin learning** work: building real tools in C++ and JUCE, breaking them in FL Studio, and fixing what I learn. Code is public so the process is visible, not just the result.
 
-**Author:** [Tal Shimoni](https://github.com/yodem/tal-protfolio) · [Portfolio](https://tal-protfolio.vercel.app)
+**Author:** [Tal Shimoni]
+
 
 ---
 
@@ -46,7 +47,7 @@ That gap — ugly but working → intentional and usable — is why this repo ex
 You do **not** need CMake or Visual Studio for that.
 
 1. Get a built `Uclid.vst3` (from [`final/VST3`](final/VST3) after someone builds it, or build once — see below).
-2. Run **`install-uclid-vst3.ps1`** (copies into your FL user plugin folder, no admin).
+2. Run **`install-uclid-vst3.ps1`** (copies into your FL user plugin folder).
 3. In FL: **Options → Manage plugins → rescan**. Use **64-bit** FL.
 
 If you prefer the system VST3 folder, use **`install-to-program-files.ps1`** in **Admin** PowerShell instead.
