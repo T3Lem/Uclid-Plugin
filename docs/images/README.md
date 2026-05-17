@@ -1,8 +1,10 @@
 # Screenshots
 
-| File | Source |
-|------|--------|
-| `uclid-before.png` | Early prototype in FL Studio (`uclid-old`) |
-| `uclid-after.png` | Current UI (`uclid-new-v1`) |
+README comparison table:
 
-Used in the root [README](../../README.md) comparison table.
+| File | Meaning |
+|------|---------|
+| `uclid-before.png` | v0 — early FL Studio prototype |
+| `uclid-after.png` | v1 — current UI |
+
+Source captures: `uclid-old` / `uclid-new-v1` from the author’s machine.
