@@ -1,0 +1,15 @@
+/build/
+/final/
+/dist/
+/external/JUCE/
+/external/juce-*.zip
+/cmake-build-*/
+/out/
+/.vs/
+*.user
+CMakeUserPresets.json
+*_autogen/
+compile_commands.json
+.vscode/*.db
+*.ilk
+*.pdb
