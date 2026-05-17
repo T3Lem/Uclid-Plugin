@@ -4,6 +4,18 @@ Euclidean rhythm volume gate — a JUCE audio effect plugin (VST3 + Standalone).
 
 Applies an **[E(pulses, steps)](https://en.wikipedia.org/wiki/Euclidean_rhythm)** pattern as a tempo-synced gain sequencer on your audio.
 
+## How this started
+
+The first version was a rough JUCE experiment: Euclidean math driving volume on a channel, built in Visual Studio without much UI polish — functional, but honestly **ugly**. The smoothing fought the rhythm, parameters didn’t line up, and FL Studio didn’t always see the plugin where it lived on disk.
+
+From that demo, the goal became clear: keep the **Euclidean gate** idea, but make it **usable** — tight step timing, a readable pattern, short de-click ramps only where needed, and a build path that actually installs as VST3. That’s this repo.
+
+| Early demo | Current Uclid |
+|------------|-----------------|
+| ![First prototype UI](docs/images/uclid-before.png) | *Build Standalone from this repo for the latest UI* |
+
+> **Before screenshot:** drop `uclid-before.png` into [`docs/images/`](docs/images/) (export from your old Standalone, or a screen capture of the legacy VST). The table above will light up automatically on GitHub.
+
 ## Features
 
 - VST3 and Standalone builds
