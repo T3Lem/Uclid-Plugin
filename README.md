@@ -53,6 +53,10 @@ CMakeLists.txt    Build configuration
 final/            Build outputs (gitignored)
 ```
 
+## Repository
+
+[github.com/T3Lem/Uclid-Plugin](https://github.com/T3Lem/Uclid-Plugin)
+
 ## Author
 
 [Tal Shimoni](https://github.com/yodem/tal-protfolio) · [Portfolio](https://tal-protfolio.vercel.app)
