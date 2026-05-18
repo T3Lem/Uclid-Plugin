@@ -6,5 +6,6 @@ README comparison table:
 |------|---------|
 | `uclid-before.png` | v0 — early FL Studio prototype |
 | `uclid-after.png` | v1 — current UI |
+| `uclid-v1.1.png` | v1.1 — cleaner standalone-style UI |
 
 Source captures: `uclid-old` / `uclid-new-v1` from the author’s machine.

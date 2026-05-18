@@ -11,11 +11,11 @@ This repo is part of my **open-source plugin learning** work: building real tool
 
 ## The learning curve
 
-Same idea, two chapters. The first screenshot is the rough prototype in FL Studio; the second is where the project landed after timing, UI, and install path actually made sense.
+Same idea, three checkpoints. The first screenshot is the rough prototype in FL Studio; the later versions show the plugin becoming tighter, cleaner, and more intentional.
 
-| v0 — first try | v1 — current |
-|----------------|--------------|
-| ![Early prototype in FL Studio](docs/images/uclid-before.png) | ![Current Uclid](docs/images/uclid-after.png) |
+| v0 — first try | v1 — usable | v1.1 — cleaner |
+|----------------|-------------|----------------|
+| ![Early prototype in FL Studio](docs/images/uclid-before.png) | ![Uclid v1 UI](docs/images/uclid-after.png) | ![Uclid v1.1 standalone UI](docs/images/uclid-v1.1.png) |
 
 **What v0 taught me**
 
@@ -23,11 +23,12 @@ Same idea, two chapters. The first screenshot is the rough prototype in FL Studi
 - Long smoothing and mismatched parameters fight the groove.
 - A plugin in the wrong folder is a plugin that “doesn’t exist” in FL Studio.
 
-**What v1 changed**
+**What changed**
 
 - Step timing tied to the transport, not vibes.
 - A circular pattern you can read (and drag to set pulses).
 - Short ramps only on step edges, plus a sane VST3 install.
+- v1.1 tightens the layout, scale, and interaction feel.
 
 That gap — ugly but working → intentional and usable — is why this repo exists.
 
