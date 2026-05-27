@@ -8,6 +8,8 @@ class EuclidAudioProcessor : public juce::AudioProcessor,
                              private juce::AudioProcessorValueTreeState::Listener
 {
 public:
+    static constexpr int kMaxPatternSteps = 64;
+
     EuclidAudioProcessor();
     ~EuclidAudioProcessor() override;
 
@@ -45,12 +47,22 @@ public:
     struct PatternSnapshot
     {
         std::vector<int> pattern;
+        std::vector<float> velocities;
         int currentStep = 0;
         float outputGain = 0.0f;
         bool isActive = false;
+        bool manualPatternLock = false;
     };
 
     PatternSnapshot getPatternSnapshot() const;
+
+    int getPatternStepCount() const;
+    bool isManualPatternLocked() const;
+    bool toggleStepEnabled(int stepIndex);
+    void setStepVelocity(int stepIndex, float velocity);
+    void applyEuclideanFromParameters();
+    void refreshPatternFromParameters();
+    void resetPatternToEuclidean();
 
 private:
     static juce::AudioProcessorValueTreeState::ParameterLayout createParameters();
@@ -60,6 +72,15 @@ private:
     void beginGainRamp(float newTarget);
     void clampPulsesToStepsParam();
     void parameterChanged(const juce::String& parameterID, float newValue) override;
+
+    void ensureStepArraysSize(int steps);
+    void resizeStepArraysPreserve(int newSteps);
+    void rebuildPatternFromSteps();
+    void applyEuclideanToSteps(int pulses, int steps);
+    void loadStepStateFromValueTree();
+    void saveStepStateToValueTree();
+    void setManualPatternLocked(bool locked);
+    float stepGainForIndex(int index) const;
 
     juce::AudioProcessorValueTreeState apvts;
 
@@ -73,6 +94,8 @@ private:
     float samplesPerStep = 256.0f;
     float sampleCounter = 0.0f;
     std::vector<int> pattern;
+    std::vector<uint8_t> stepEnabled;
+    std::vector<float> stepVelocity;
     int stepIndex = 0;
     std::atomic<int> uiStepIndex { 0 };
     std::atomic<float> uiOutputGain { 1.0f };
@@ -84,8 +107,10 @@ private:
     juce::AudioParameterInt* gridParam = nullptr;
     juce::AudioParameterInt* stepsParam = nullptr;
     juce::AudioParameterInt* pulsesParam = nullptr;
+    juce::AudioParameterBool* linkGridStepsParam = nullptr;
     juce::AudioParameterBool* bypassParam = nullptr;
     juce::AudioParameterFloat* smoothMsParam = nullptr;
+    juce::AudioParameterBool* patternLockParam = nullptr;
 
     int cachedGrid = -1;
     int cachedSteps = -1;
