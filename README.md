@@ -13,9 +13,9 @@ This repo is part of my **open-source plugin learning** work: building real tool
 
 Same idea, three checkpoints. The first screenshot is the rough prototype in FL Studio; the later versions show the plugin becoming tighter, cleaner, and more intentional.
 
-| v0 — first try | v1 — usable | v1.1 — cleaner |
-|----------------|-------------|----------------|
-| ![Early prototype in FL Studio](docs/images/uclid-before.png) | ![Uclid v1 UI](docs/images/uclid-after.png) | ![Uclid v1.1 standalone UI](docs/images/uclid-v1.1.png) |
+| v0 — first try | v1 — usable | v1.1 — cleaner | v1.2 — FL automation |
+|----------------|-------------|----------------|----------------------|
+| ![Early prototype in FL Studio](docs/images/uclid-before.png) | ![Uclid v1 UI](docs/images/uclid-after.png) | ![Uclid v1.1 standalone UI](docs/images/uclid-v1.1.png) | ![Uclid v1.2 in FL Studio](docs/images/uclid-v1.2.png) |
 
 **What v0 taught me**
 
@@ -29,6 +29,7 @@ Same idea, three checkpoints. The first screenshot is the rough prototype in FL 
 - A circular pattern you can read (and drag to set pulses).
 - Short ramps only on step edges, plus a sane VST3 install.
 - v1.1 tightens the layout, scale, and interaction feel.
+- v1.2 exposes Grid, Step, Pulse, and Mix to FL Studio’s native right-click automation (Create automation clip, Link to controller, Last tweaked).
 
 That gap — ugly but working → intentional and usable — is why this repo exists.
 
@@ -40,6 +41,7 @@ That gap — ugly but working → intentional and usable — is why this repo ex
 - **VST3** for FL Studio and other hosts · **Standalone** for quick tests  
 - Circular UI, link/split **Grid** and **Steps**, light de-click (**0–10 ms**)  
 - **Mix** and bypass like a normal effect  
+- **FL Studio integration:** right-click Grid, Step, Pulse, or Mix for host automation and MIDI mapping  
 
 ---
 
